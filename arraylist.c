@@ -16,7 +16,7 @@ ArrayList *createList(void) {
 	new->capacity=0;
 	new->size=0;
 
-	return ArrayList;
+	return new;
 }
 
 void append(ArrayList * l, void * data){
