@@ -42,3 +42,9 @@ arraylist.c:15:22: error: ‘new’ is used uninitialized [-Werror=uninitialized
 cc1: all warnings being treated as errors
 Compilation failed
 e56dbb8
+Thu 30 Mar 2023 11:19:21 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+58a873f
