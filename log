@@ -6,3 +6,17 @@ Thu 30 Mar 2023 11:14:17 PM UTC:
  tests:  0|6
 total_score: 0/70
 d9794c3
+Thu 30 Mar 2023 11:17:49 PM UTC: 
+ arraylist.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:19:16: error: expected expression before ‘ArrayList’
+   19 |         return ArrayList;
+      |                ^~~~~~~~~
+arraylist.c:20:1: error: control reaches end of non-void function [-Werror=return-type]
+   20 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7f36e39
