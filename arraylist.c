@@ -12,7 +12,6 @@ typedef struct ArrayList {
 
 ArrayList *createList(void) {
     ArrayList* new;
-	new->data=NULL;
 	new->capacity=0;
 	new->size=0;
 
