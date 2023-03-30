@@ -11,9 +11,10 @@ typedef struct ArrayList {
 } ArrayList;
 
 ArrayList *createList(void) {
+							 
     ArrayList* new=malloc(sizeof(ArrayList));
 	new->data = (void **) malloc(sizeof(void*)*2);
-	new->capacity=0;
+	new->capacity=2; //porque inicializa en 2?
 	new->size=0;
 
 	return new;
