@@ -21,6 +21,12 @@ void expandList(ArrayList *l)
 
 }
 
+void empujarDer(ArrayList* l,int i)
+{
+	for(int k = l->size; k > i ;	k--)
+		l->data[k+1]=l->data[k]; //
+}
+
 ArrayList *createList(void) {
 							 
     ArrayList* new=malloc(sizeof(ArrayList));
@@ -36,14 +42,16 @@ void append(ArrayList * l, void * data){
 	
 	l->data[l->size]= data;
 	l->size++;
-
-	
-	
-	
 }
 
 void push(ArrayList * l, void * data, int i){
+	if (l->size == l->capacity) expandList(l);
+	if (i> l->size) return;
 
+	empujarDer(l,i);
+
+	l->data[i]=data;
+	
 }
 
 void* pop(ArrayList * l, int i){
