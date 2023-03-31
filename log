@@ -222,3 +222,14 @@ Fri 31 Mar 2023 03:14:04 PM UTC:
  tests:  11|1
 total_score: 50/70
 80bca9e
+Fri 31 Mar 2023 05:23:59 PM UTC: 
+ arraylist.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:93:16: error: assignment to ‘void **’ from incompatible pointer type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   93 |         l->data=createList();
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+ee47549
