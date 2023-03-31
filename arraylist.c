@@ -76,7 +76,13 @@ void *pop(ArrayList *l, int i) {
   return stored;
 }
 
-void *get(ArrayList *l, int i) { return NULL; }
+void *get(ArrayList *l, int i) { 
+	if (l->size==0 || l->size < i) return NULL;
+
+	i=(i < 0)?(l->size+i):i;
+	
+	return l->data[i];
+}
 
 int get_size(ArrayList *l) { return l->size; }
 
