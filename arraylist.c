@@ -63,7 +63,7 @@ void push(ArrayList *l, void *data, int i) {
 }
 
 void *pop(ArrayList *l, int i) {
-  if (l->capacity==0 || i > l->size)
+  if (l->size==0 || i > l->size)
     return NULL;
 	
   if (i<0)
