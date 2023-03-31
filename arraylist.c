@@ -13,7 +13,7 @@ typedef struct ArrayList {
 
 void expandList(ArrayList *l)
 {
-n
+
 	l->data=realloc(l->data,l->capacity*2);
 
 	l->capacity*=2;
