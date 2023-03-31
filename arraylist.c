@@ -89,6 +89,7 @@ int get_size(ArrayList *l) { return l->size; }
 // remove elements
 void clean(ArrayList *l) {
 
-	/*free(l);
-	l = createList();*/
+	free(l->data);
+	free(l);
+	l = createList();
 }
