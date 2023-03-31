@@ -51,7 +51,7 @@ void push(ArrayList * l, void * data, int i){
 	empujarDer(l,i);
 
 	l->data[i]=data;
-	size++;
+	l->size++;
 }
 
 void* pop(ArrayList * l, int i){
