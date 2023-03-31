@@ -10,6 +10,7 @@ typedef struct ArrayList {
   int size;
 } ArrayList;
 
+
 void expandList(ArrayList *l) {
 
   l->data = realloc(l->data, l->capacity * 2);
@@ -23,8 +24,10 @@ void empujarDer(ArrayList *l, int i) {
 }
 
 void empujarIzq(ArrayList *l, int i) {
-  for (int k = i; k > l->size - 1; k++)
+  for (int k = i; k < l->size - 1; k++)
     l->data[k] = l->data[k + 1]; //
+
+	
 }
 
 ArrayList *createList(void) {
