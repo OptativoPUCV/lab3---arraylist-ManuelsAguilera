@@ -14,9 +14,11 @@ typedef struct ArrayList {
 void expandList(ArrayList *l)
 {
 	l->data=realloc(l->data,l->capacity*2);
+
 	
-	printf("\n\n\nl: %d %d\n\n",l->capacity,l->size);
 	l->capacity*=2;
+	printf("\n\n\nl: %d %d\n\n",l->capacity,l->size);
+
 }
 
 ArrayList *createList(void) {
