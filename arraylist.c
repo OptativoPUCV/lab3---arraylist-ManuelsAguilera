@@ -90,8 +90,10 @@ int get_size(ArrayList *l) { return l->size; }
 void clean(ArrayList *l) {
 
 	free(l->data);
+	void** new = malloc(sizeof(void*)*2);
+	
 	l->capacity=2;
 	l->size=0;
-	l->data= realloc(l->data,2);
+	l->data= new;
 	
 }
