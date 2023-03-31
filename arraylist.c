@@ -30,7 +30,7 @@ void empujarDer(ArrayList* l,int i)
 void empujarIzq(ArrayList* l,int i)
 {
 	for(int k = i; k > l->size ; k++)
-		l->data[k+1]=l->data[k]; //
+		l->data[k]=l->data[k+1]; //
 }
 
 ArrayList *createList(void) {
