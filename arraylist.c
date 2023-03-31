@@ -92,6 +92,6 @@ void clean(ArrayList *l) {
 	free(l->data);
 	l->capacity=2;
 	l->size=0;
-	l->data= malloc(sizeof(void*)*2);
+	l->data= realloc(l->data,2);
 	
 }
