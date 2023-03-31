@@ -27,6 +27,12 @@ void empujarDer(ArrayList* l,int i)
 		l->data[k+1]=l->data[k]; //
 }
 
+void empujarIzq(ArrayList* l,int i)
+{
+	for(int k = i; k > l->size ; k++)
+		l->data[k+1]=l->data[k]; //
+}
+
 ArrayList *createList(void) {
 							 
     ArrayList* new=malloc(sizeof(ArrayList));
@@ -38,6 +44,7 @@ ArrayList *createList(void) {
 }
 
 void append(ArrayList * l, void * data){
+	//Si esta lleno agrandar.
 	if (l->size == l->capacity) expandList(l);
 	
 	l->data[l->size]= data;
@@ -46,6 +53,7 @@ void append(ArrayList * l, void * data){
 
 void push(ArrayList * l, void * data, int i){
 	if (l->size == l->capacity) expandList(l);
+	//si es mayor no hay que hacer nada
 	if (i> l->size) return;
 
 	empujarDer(l,i);
@@ -55,7 +63,12 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
-    return NULL;
+	if (i<0 || i>l->size) return NULL;
+	void* stored = l->data[i];
+
+	empujarIzq(l,i);
+	l->size--;
+    return stored;
 }
 
 void* get(ArrayList * l, int i){
