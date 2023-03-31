@@ -13,10 +13,12 @@ typedef struct ArrayList {
 
 void expandList(ArrayList *l)
 {
-	ArrayList* new = malloc(sizeof(ArrayList)*(l->capacity)*4);
+	ArrayList* new = malloc(sizeof(ArrayList)*(l->capacity)*2);
 	*new = *l;
 	l=new;
 	free(new);
+
+	l->capacity*=2;
 }
 
 ArrayList *createList(void) {
