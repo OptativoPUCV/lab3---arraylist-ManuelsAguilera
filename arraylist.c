@@ -17,7 +17,7 @@ void expandList(ArrayList *l)
 	*new = *l;
 	l=new;
 	free(new);
-
+	printf("\n\n\nl: %d %d\n\n",l->capacity,l->size);
 	l->capacity*=2;
 }
 
