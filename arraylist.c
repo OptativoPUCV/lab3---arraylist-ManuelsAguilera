@@ -23,7 +23,7 @@ void expandList(ArrayList *l)
 
 void empujarDer(ArrayList* l,int i)
 {
-	for(int k = l->size; k >= i ;	k--)
+	for(int k = l->size-1; k >= i ;	k--)
 		l->data[k+1]=l->data[k]; //
 }
 
