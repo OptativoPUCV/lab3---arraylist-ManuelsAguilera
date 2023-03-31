@@ -145,3 +145,15 @@ Fri 31 Mar 2023 02:26:19 PM UTC:
  tests:  3|4
 total_score: 20/70
 4a56e4b
+Fri 31 Mar 2023 02:26:38 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:54:9: error: ‘size’ undeclared (first use in this function); did you mean ‘dysize’?
+   54 |         size++;
+      |         ^~~~
+      |         dysize
+arraylist.c:54:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ea82d53
